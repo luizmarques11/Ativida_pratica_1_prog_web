@@ -23,3 +23,28 @@ button {
 .informacoes {
     margin-top: 20px;
 }
+
+#tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 5px;
+
+    justify-content: center;
+
+    margin-top: 20px;
+}
+
+.casa {
+    width: 60px;
+    height: 60px;
+
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.casa:hover {
+    background-color: #666;
+}
