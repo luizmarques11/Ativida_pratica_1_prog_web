@@ -11,7 +11,45 @@
 
 <body>
 
-    <h1>Mines</h1>
+    <main class="jogo">
+        <h1>Mines</h1>
+
+        <p>
+            Escolha a quantidade de minas e tente encontrar
+            todas as casas seguras.
+        </p>
+
+        <div class="controles">
+            <label for="quantidade-minas">
+                Quantidade de minas:
+            </label>
+
+            <select id="quantidade-minas">
+                <option value="1">1</option>
+                <option value="3" selected>3</option>
+                <option value="5">5</option>
+                <option value="7">7</option>
+                <option value="10">10</option>
+            </select>
+
+            <button id="botao-iniciar">
+                Iniciar jogo
+            </button>
+        </div>
+
+        <div class="informacoes">
+            <p>
+                Pontos:
+                <span id="pontos">0</span>
+            </p>
+
+            <p id="mensagem">
+                Clique em "Iniciar jogo".
+            </p>
+        </div>
+
+        <div id="tabuleiro"></div>
+    </main>
 
     <script src="script.js"></script>
 </body>

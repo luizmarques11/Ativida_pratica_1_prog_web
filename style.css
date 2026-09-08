@@ -1,3 +1,25 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    margin: 0;
+}
+
+.jogo {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.controles {
+    margin: 20px;
+}
+
+select,
+button {
+    padding: 8px;
+    margin: 5px;
+}
+
+.informacoes {
+    margin-top: 20px;
 }
