@@ -6,7 +6,7 @@ let casasComMinas = [];
 
 casas.forEach(function (casa) {
     casa.addEventListener("click", function () {
-        console.log("Casa clicada:", casa.id);
+        verificarCasa(casa);
     });
 });
 
@@ -29,4 +29,12 @@ function sortearMinas() {
     }
 
     console.log("Casas com minas:", casasComMinas);
+}
+
+function verificarCasa(casa) {
+    if (casasComMinas.includes(casa.id)) {
+        casa.textContent = "💣";
+    } else {
+        casa.textContent = "💎";
+    }
 }
