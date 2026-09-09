@@ -27,7 +27,7 @@ button {
 #tabuleiro {
     display: grid;
     grid-template-columns: repeat(5, 60px);
-    gap: 5px;
+    gap: 6px;
 
     justify-content: center;
 
@@ -39,12 +39,32 @@ button {
     height: 60px;
 
     background-color: #555;
-    border: none;
-    border-radius: 5px;
+    color: white;
+
+    border: 2px solid #777;
+    border-radius: 6px;
+
+    font-size: 24px;
 
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
 .casa:hover {
     background-color: #666;
+}
+
+.casa.aberta {
+    cursor: default;
+}
+
+.casa.segura {
+    background-color: #2e8b57;
+    border-color: #3cb371;
+}
+
+.casa.mina {
+    background-color: #b22222;
+    border-color: #dc143c;
 }

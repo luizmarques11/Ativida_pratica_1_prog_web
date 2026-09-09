@@ -36,7 +36,10 @@ function iniciarJogo() {
 function limparTabuleiro() {
     casas.forEach(function (casa) {
         casa.textContent = "";
+
         casa.classList.remove("aberta");
+        casa.classList.remove("segura");
+        casa.classList.remove("mina");
     });
 }
 
@@ -68,6 +71,7 @@ function verificarCasa(casa) {
 
     if (casasComMinas.includes(casa.id)) {
         casa.textContent = "💣";
+        casa.classList.add("mina");
 
         jogoAtivo = false;
 
@@ -76,6 +80,7 @@ function verificarCasa(casa) {
         revelarMinas();
     } else {
         casa.textContent = "💎";
+        casa.classList.add("segura");
 
         pontos++;
 
@@ -99,6 +104,7 @@ function revelarMinas() {
     casas.forEach(function (casa) {
         if (casasComMinas.includes(casa.id)) {
             casa.textContent = "💣";
+            casa.classList.add("mina");
         }
     });
 }
