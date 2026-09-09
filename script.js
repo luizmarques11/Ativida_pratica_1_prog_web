@@ -2,9 +2,11 @@ const casas = document.querySelectorAll(".casa");
 const botaoIniciar = document.getElementById("botao-iniciar");
 const seletorQuantidadeMinas = document.getElementById("quantidade-minas");
 const mensagem = document.getElementById("mensagem");
+const elementoPontos = document.getElementById("pontos");
 
 let casasComMinas = [];
 let jogoAtivo = false;
+let pontos = 0;
 
 casas.forEach(function (casa) {
     casa.addEventListener("click", function () {
@@ -18,6 +20,9 @@ botaoIniciar.addEventListener("click", function () {
 
 function iniciarJogo() {
     jogoAtivo = true;
+    pontos = 0;
+
+    elementoPontos.textContent = pontos;
 
     limparTabuleiro();
     sortearMinas();
@@ -68,5 +73,9 @@ function verificarCasa(casa) {
         mensagem.textContent = "Você encontrou uma mina!";
     } else {
         casa.textContent = "💎";
+
+        pontos++;
+
+        elementoPontos.textContent = pontos;
     }
 }
